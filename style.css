@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    padding: 10px;
+    color: white;
+}
+
+header h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+.container-time{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 30px;
+    
+}
+
+.time-content{
+    margin-top: 50px;
+    padding-left: 20px;
+    text-align: center;
+    
+}
+
+.relogio{
+    background-color: rgb(190, 0, 0);
+    width: 200px;
+    height: 70px;
+    margin-top: 40px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 2rem;
+    text-align: center;
+    animation: flutuar 3s infinite linear;
+}  
+
+@keyframes flutuar{
+    0%,100%{transform: translateY(0);}
+    50%{transform: translateY(-8px);}
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 80px;
+}
+
+button{
+    border: none;
+   
+}
+
+button a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-image: linear-gradient(to right, rgb(255, 0, 0),rgb(163, 19, 0));
+     padding: 10px 15px;
+     border-radius: 8px;
+     font-size: 2.5rem;
+     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.726);
+     animation: crescer 2s infinite linear;
+     display: block;
+}
+
+@keyframes crescer{
+    0%,100%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+}
+
+
+.encerrado {
+   background: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: crimson;
+    animation: fade 2s forwards infinite;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width:499px){
+    .time-content{
+        padding-left: 5px;
+    }
+
+    .relogio{
+        width: 150px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    button a{
+        font-size: 2rem;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+}
